@@ -18,7 +18,7 @@
         -EXPOSE: (port number that) informs docker of what port to listen to.\
         -CMD: (This specifies the commands to execute when you run a container)
 
-so an exmaple of this would be:
+An example of this would be:
 
             FROM node:21.6.0
             WORKDIR /azmi_oualid_site
