@@ -34,9 +34,6 @@ so an example of this would be:
 
 3. Now run this command in the terminal do build the image: "docker build -t (image_name) ."
 
-4. now run this command in the terminal to run the container: "docker run -p 7775:5173 (image_name)".
-
-
 ## How to Run this dockerized React application.
 
 1. Clone the repository by clicking on the "<> Code" green button, and following the instructions to clone the repository.
