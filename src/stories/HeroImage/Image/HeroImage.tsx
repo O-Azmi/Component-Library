@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { HeroImageProps } from './HeroImage.types';
 
-const StyledImage = styled.img<{ disabled?: boolean}>`
+const StyledHeroImage = styled.img<{ disabled?: boolean}>`
 
     ${props =>
     props.disabled &&
@@ -14,7 +14,7 @@ const StyledImage = styled.img<{ disabled?: boolean}>`
 export default function Image({ height, src, alt, disabled, width }: HeroImageProps) {
   return (
     <>
-      <StyledImage  height={height} src={src} alt={alt} width={width}  disabled={disabled}/>
+      <StyledHeroImage height={height} src={src} alt={alt} width={width}  disabled={disabled}/>
     </>
   );
 };

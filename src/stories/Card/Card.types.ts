@@ -1,9 +1,13 @@
 import "react"
-export type HeroImageProps = {
+export type CardProps = {
     /**
      * what the alternative name for the image will be
      */
     alt: string;
+    /**
+     * What the text on the card will be
+     */
+    text:string; 
     /**
      * What the width of the image will be
      */
@@ -17,8 +21,11 @@ export type HeroImageProps = {
      */
     disabled?: boolean;
     /**
-     * What the height of the image will be
+     * What the height of the image
      */
-    height: string;
+    height:string;
+    /**
+     * What the text on the image will be
+     */
   }
 
