@@ -24,8 +24,6 @@ export type CardProps = {
      * What the height of the image
      */
     height:string;
-    /**
-     * What the text on the image will be
-     */
+    
   }
 
