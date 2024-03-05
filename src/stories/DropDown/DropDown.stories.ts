@@ -19,12 +19,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    text: "Menu",
     disabled: false,
   },
 };
 
 export const Disabled: Story = { 
   args: {
+    text: "Menu",
     disabled: true,
   },
 };

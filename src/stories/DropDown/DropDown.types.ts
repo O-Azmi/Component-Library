@@ -10,5 +10,5 @@ export type DropDownProps = {
     */
     onClick: () => void;
 
-    isOpen?: boolean;
+    text: string;
   }

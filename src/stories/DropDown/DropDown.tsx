@@ -12,7 +12,7 @@ const StyledDropDown = styled.button<{ disabled?: boolean }>`
   padding: 1em;
   background-color: #D9D9D9;
   color: rgb(0, 0, 0);
-  width: 2em;
+  width: 5em;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -28,24 +28,6 @@ const StyledDropDown = styled.button<{ disabled?: boolean }>`
     `};
 
 `;
-const StyledSpan = styled.span<{isOpen?: boolean}>`
-  position: absolute;
-  margin: 0 auto;
-  left: 4px;
-  height: 4px;
-  width: 70%;
-  background: #000;
-  transition: 0.5s;
-  border-radius: 10px;
-  
-  ${props =>
-    !props.isOpen &&
-    css`
-    &:nth-child(1) { top: 6px; }
-    &:nth-child(2) { top: 12px; }
-    &:nth-child(3) { top: 19px; }
-    `};
-`
 const DropDownMenu = styled.ul<{ isOpen: boolean }>`
   list-style: none;
   padding: 0;
@@ -72,7 +54,7 @@ const DropDownItem = styled.li`
   }
 `;
 
-export default function DropDown({ disabled }: DropDownProps) {
+export default function DropDown({ disabled, text }: DropDownProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -85,11 +67,7 @@ export default function DropDown({ disabled }: DropDownProps) {
         disabled={disabled}
         onClick={toggleMenu}
       >
-        <div>
-          <StyledSpan></StyledSpan>
-          <StyledSpan></StyledSpan>
-          <StyledSpan></StyledSpan>
-          </div>
+        {text}
       </StyledDropDown>
       <DropDownMenu isOpen={isOpen}>
         <Anchor><DropDownItem>Home</DropDownItem></Anchor>
