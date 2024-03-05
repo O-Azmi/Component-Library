@@ -7,7 +7,6 @@ export type CardProps = {
     /**
      * What the text on the card will be
      */
-    text:string; 
     /**
      * What the width of the image will be
      */
