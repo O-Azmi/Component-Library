@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import { TableHeaderProps } from './TableHeader.types';
 
+import { TableHeaderProps } from './TableHeader.types';
 const StyledTableHeader = styled.th<{disabled?: boolean; border: string,width?: string; height?: string }>`
     text-align:center;
     vertical-align: middle;

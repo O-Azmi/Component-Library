@@ -15,7 +15,7 @@ export type TableCellProps = {
     /**
      * What the background color of the cell will be
      */
-    backgroundColor: string;
+    backgroundColor?: string;
     /**
      * Choose what side the border will be on
      */

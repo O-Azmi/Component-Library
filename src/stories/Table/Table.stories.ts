@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import TableRow from './TableRow.tsx'; 
+import Table from './Table.tsx'; 
 
 const meta: Meta = {
-  title: 'Example/Table/Table Row',
-  component: TableRow,
+  title: 'Example/Table/Table',
+  component: Table,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: 'color' },
+    
   },
   
 };
