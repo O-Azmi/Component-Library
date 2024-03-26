@@ -17,7 +17,7 @@ const StyledCard = styled.img<{ disabled?: boolean }>`
   ${props =>
     props.disabled &&
     css`
-      filter: grayscale(100%);
+      filter: grayscale(1);
       cursor: not-allowed;
     `};
 `;
@@ -38,7 +38,7 @@ const WrapText = styled.div`
 export default function Card({ src, alt, disabled, height }: CardProps) {
   return (
     <Container>
-      <StyledCard height={height} src={src} alt={alt}  disabled={disabled} />
+      <StyledCard data-testid ="myCard" height={height} src={src} alt={alt}  disabled={disabled} />
       <WrapText>
       <Text label={"E-Commerce Project"} size={''} bold={'bold'} disabled={disabled} />
       </WrapText>

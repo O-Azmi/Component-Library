@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Card from './Card.tsx'; 
+import { within, userEvent, expect } from '@storybook/test'; 
 
 const meta: Meta = {
   title: 'Example/Card',
@@ -26,6 +27,11 @@ export const Primary: Story = {
     height: "260px",
     text: "Hello this is my card"
   },
+  play: async ({ canvasElement }) => { 
+    const canvas = within(canvasElement);
+
+    await userEvent.hover(canvas.getByTestId('myCard'));
+  }
 };
 
 export const Disabled: Story = {
@@ -37,5 +43,9 @@ export const Disabled: Story = {
     height: "260px",
     text: "Hello this is my card"
     },
-  };
+    play: async ({ canvasElement }) => { 
+      const canvas = within(canvasElement);
+      expect(canvas.getByTestId("myCard")).toHaveStyle({ filter: 'grayscale(1)', cursor: 'not-allowed' });
+  }
+};
   

@@ -15,7 +15,7 @@ const StyledImage = styled.img<{enabled?: boolean,  disabled?: boolean}>`
     ${props =>
     props.disabled &&
     css`
-    filter: grayscale(100%);
+    filter: grayscale(1);
     cursor: not-allowed;
     `};
 `
@@ -23,7 +23,7 @@ const StyledImage = styled.img<{enabled?: boolean,  disabled?: boolean}>`
 export default function Image({ enabled, src, alt, disabled, width }: ImageProps) {
   return (
     <>
-      <StyledImage enabled={enabled} src={src} alt={alt} width={width}  disabled={disabled}/>
+      <StyledImage enabled={enabled} src={src} alt={alt} width={width}  disabled={disabled} data-testid="myImage"/>
     </>
   );
 };

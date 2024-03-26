@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import type { ButtonProps } from "./Button.types.ts";
 
-const StyledButton = styled.button<{ size?: string, disabled?: boolean, secondary?: boolean }>`
+const StyledButton = styled.button<{ size?: string, disabled?: boolean, secondary?: boolean, backgroundColor?: string }>`
   width: 8em;
   color: white;
   padding: 1em;
@@ -40,6 +40,16 @@ const StyledButton = styled.button<{ size?: string, disabled?: boolean, secondar
     css`
       color: black;
     `};
+    ${props =>
+    !props.disabled &&
+    css`
+    &:hover {
+    border-color: black;
+    transform: scale(1.1);
+    transition: border-color 0.2s ease-in-out; 
+    transition: transform 0.2s ease-in-out; 
+}
+    `};
 `;
 
 export default function Button({ backgroundColor, label, size, disabled, onClick, secondary }: ButtonProps) {
@@ -50,6 +60,8 @@ export default function Button({ backgroundColor, label, size, disabled, onClick
       disabled={disabled}
       onClick={onClick}
       secondary={secondary}
+      data-testid="myButton"
+
     >
       {label}
     </StyledButton>

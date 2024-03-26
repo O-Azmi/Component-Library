@@ -50,7 +50,7 @@ const DropDownItem = styled.li`
   transition: background-color 0.3s;
 
   &:hover {
-    box-shadow: 5px 5px 5px 0px #a7a7a7, inset 4px 4px 15px 0px #6a6a6a, -1px 1px 15px 2px rgba(0,0,0,0);
+    box-shadow: 5px 5px 5px 0px #552d2d, inset 4px 4px 15px 0px #6a6a6a, -1px 1px 15px 2px rgba(0,0,0,0);
   }
 `;
 
@@ -66,14 +66,15 @@ export default function DropDown({ disabled, text }: DropDownProps) {
       <StyledDropDown
         disabled={disabled}
         onClick={toggleMenu}
+        data-testid="myDropDown"
       >
         {text}
       </StyledDropDown>
       <DropDownMenu isOpen={isOpen}>
-        <Anchor><DropDownItem>Home</DropDownItem></Anchor>
-        <Anchor><DropDownItem>Projects</DropDownItem></Anchor>
-        <Anchor><DropDownItem>Skills</DropDownItem></Anchor>
-        <Anchor><DropDownItem>Contact Us</DropDownItem></Anchor>        
+        <Anchor><DropDownItem data-testid="myItem1">Home</DropDownItem></Anchor>
+        <Anchor><DropDownItem data-testid="myItem2">Projects</DropDownItem></Anchor>
+        <Anchor><DropDownItem data-testid="myItem3">Skills</DropDownItem></Anchor>
+        <Anchor><DropDownItem data-testid="myItem4">Contact Us</DropDownItem></Anchor>        
       </DropDownMenu>
     </StyledDropDownWrapper>
   );

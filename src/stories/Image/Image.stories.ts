@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import Image from './Image.tsx'; 
+import { within, userEvent, expect } from '@storybook/test'; 
 
 const meta: Meta = {
   title: 'Example/Image',
@@ -25,6 +26,11 @@ export const Primary: Story = {
     width: "300px",
     disabled: false,
   },
+  play: async ({ canvasElement }) => { 
+    const canvas = within(canvasElement);
+    expect(canvas.getByTestId("myImage")).toBeInTheDocument();
+    await userEvent.hover(canvas.getByTestId("myImage"));
+}
 };
 
 export const Disabled: Story = {
@@ -35,5 +41,9 @@ export const Disabled: Story = {
     disabled: true,
     enabled: false,
     },
+    play: async ({ canvasElement }) => { 
+      const canvas = within(canvasElement);
+      expect(canvas.getByTestId("myImage")).toHaveStyle({ filter: 'grayscale(1)', cursor: 'not-allowed' });
+  }
   };
   

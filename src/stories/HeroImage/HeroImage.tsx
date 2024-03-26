@@ -14,7 +14,7 @@ const StyledHeroImage = styled.img<{ disabled?: boolean}>`
 export default function Image({ height, src, alt, disabled, width }: HeroImageProps) {
   return (
     <>
-      <StyledHeroImage height={height} src={src} alt={alt} width={width}  disabled={disabled}/>
+      <StyledHeroImage height={height} src={src} alt={alt} width={width}  disabled={disabled} data-testid="myHeroImage"/>
     </>
   );
 };
