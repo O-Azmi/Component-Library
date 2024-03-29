@@ -57,6 +57,7 @@ export default function Text({ label, disabled, size, bold, underline }: TextPro
                 disabled={disabled}
                 bold={bold}
                 underline={underline}
+                data-testid="myText"
             >
               {label}
             </StyledText>

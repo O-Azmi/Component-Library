@@ -32,7 +32,7 @@ const StyledLabel = styled.label<{disabled?: boolean, font?: string, isValid?: b
      ${props =>
     props.isValid &&
     css`
-      color: Red;
+      color: #ff0000;
     `};
    
 `;
@@ -69,12 +69,15 @@ export default function Label({ label, disabled, font, isValid }: LabelProps) {
                 font={font}
                 disabled={disabled}
                 isValid={isValid}
+                data-testid="myLabel"
+
             >
                 {label}
             </StyledLabel>
             <InputField 
                 disabled={disabled} 
                 isValid={isValid} 
+                data-testid="myInputField"
             />
         </Container>
     );

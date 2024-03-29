@@ -41,7 +41,7 @@ const RadioInput = styled.input.attrs({ type: 'radio' })<RadioButtonProps>`
 export default function RadioButton({disabled}: RadioButtonProps) {
   return (
     <>
-      <RadioInput  disabled={disabled}/>
+      <RadioInput  disabled={disabled} data-testid= "myRadio"/>
     </>
   );
 };

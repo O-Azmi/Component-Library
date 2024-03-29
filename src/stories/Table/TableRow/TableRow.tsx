@@ -15,7 +15,7 @@ const StyledTableRow = styled.tr<{disabled?: boolean}>`
 export default function TableRow({ disabled, children }: TableRowProps) {
     return (
         <>
-        <StyledTableRow  disabled={disabled}>
+        <StyledTableRow data-testid="myTableRow"  disabled={disabled}>
             {children}
         </StyledTableRow>
   

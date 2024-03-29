@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import Label from './Label.tsx'; 
+import { within, expect } from '@storybook/test'; 
 
 const meta: Meta = {
   title: 'Example/Label',
@@ -25,14 +25,23 @@ export const Primary: Story = {
     label: 'Label',
     font: 'default',
   },
+  play: async ({ canvasElement }) => { 
+    const canvas = within(canvasElement);
+    expect(canvas.getByTestId("myLabel")).toBeInTheDocument();
+  }
 };
 
 export const Invalid: Story = {
     args: {
       label: 'Label',
       font: 'default',
-      isValid: true
+      isValid: false
     },
+    play: async ({ canvasElement }) => { 
+      const canvas = within(canvasElement);
+      expect(canvas.getByTestId("myLabel")).toHaveStyle({ color: '#ff0000'});
+      expect(canvas.getByTestId("myInputField")).toHaveStyle({borderColor: '#ff0000'})
+    }
   };
 export const Disabled: Story = {
     args: {
@@ -40,4 +49,9 @@ export const Disabled: Story = {
       font: 'default',
       disabled: true
     },
+    play: async ({ canvasElement }) => { 
+      const canvas = within(canvasElement);
+      expect(canvas.getByTestId("myLabel")).toHaveStyle({ opacity: '0.5', cursor: 'not-allowed' });
+      expect(canvas.getByTestId("myInputField")).toHaveStyle({ opacity: '0.5', cursor: 'not-allowed' })
+    }
   };

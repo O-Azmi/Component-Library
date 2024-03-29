@@ -18,7 +18,7 @@ const StyledTable = styled.table<{disabled?: boolean}>`
 
 export default function Table({ disabled }: TableProps) {
     return (
-        <StyledTable disabled={disabled}>
+        <StyledTable data-testid="myTable" disabled={disabled}>
             <TableRow>
             <TableHeader width={'200px'} height={'50px'} backgroundColor={'#949494'} border={'right'} text={'Skills'}/>
             <TableHeader width={'200px'} height={'50px'} backgroundColor={'#949494'} border={'left'} text={'Skills'}/>

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import TableCell from './TableCell.tsx'; 
+import { within, expect } from '@storybook/test'; 
 
 const meta: Meta = {
   title: 'Example/Table/Table Cell',
@@ -32,6 +33,11 @@ export const Primary: Story = {
     text: "Skills",
     bold: "default"
   },
+  play: async ({ canvasElement }) => { 
+    const canvas = within(canvasElement);
+    const myTableCell = canvas.getByTestId('myTableCell');
+    expect(myTableCell).toBeInTheDocument();
+  }
 };
 
 export const Disabled: Story = {
@@ -43,7 +49,11 @@ export const Disabled: Story = {
         disabled: true,
         text: "Skills",
         bold: "default"
-
     },
+    play: async ({ canvasElement }) => { 
+      const canvas = within(canvasElement);
+      const myTableCell = canvas.getByTestId('myTableCell');
+      expect(myTableCell).toHaveStyle({ opacity: '0.5', cursor: 'not-allowed' });
+    }
   };
   

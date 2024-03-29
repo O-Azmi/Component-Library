@@ -46,6 +46,6 @@ const StyledTableHeader = styled.th<{disabled?: boolean; border: string,width?: 
 
 export default function TableHeader({ width, height, disabled, backgroundColor, border, text }: TableHeaderProps) {
     return (
-        <StyledTableHeader width={width} height={height}  style={{ backgroundColor: backgroundColor }} border={border} disabled={disabled}>{text}</StyledTableHeader>
+        <StyledTableHeader data-testid="myTableHeader" width={width} height={height}  style={{ backgroundColor: backgroundColor }} border={border} disabled={disabled}>{text}</StyledTableHeader>
     );
 }

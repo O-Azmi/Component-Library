@@ -58,6 +58,6 @@ const StyledTableCell = styled.td<{disabled?: boolean; border: string,width?: st
 
 export default function TableCell({ width, height, disabled, backgroundColor, border, text, bold }: TableCellProps) {
     return (
-        <StyledTableCell width={width} height={height}  style={{ backgroundColor: backgroundColor }} border={border} disabled={disabled} bold={bold}>{text}</StyledTableCell>
+        <StyledTableCell data-testid="myTableCell" width={width} height={height}  style={{ backgroundColor: backgroundColor }} border={border} disabled={disabled} bold={bold}>{text}</StyledTableCell>
     );
 }

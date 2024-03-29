@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import Text from './Text.tsx'; 
+import { within, expect } from '@storybook/test'; 
 
 const meta: Meta = {
   title: 'Example/Text',
@@ -29,6 +29,10 @@ export const Primary: Story = {
     bold: 'default',
     underline: false
   },
+  play: async ({ canvasElement }) => { 
+    const canvas = within(canvasElement);
+    expect(canvas.getByTestId("myText")).toBeInTheDocument();
+  }
 };
 export const Bold: Story = {
   args: {
@@ -36,8 +40,12 @@ export const Bold: Story = {
     size: 'medium',
     bold: 'bold',
     underline: false
-
   },
+  play: async ({ canvasElement }) => { 
+    const canvas = within(canvasElement);
+    expect(canvas.getByTestId("myText")).toBeInTheDocument();
+    expect(canvas.getByTestId("myText")).toHaveStyle({ fontWeight: "800" });
+  }
 };
 export const Underline: Story = {
   args: {
@@ -46,6 +54,11 @@ export const Underline: Story = {
     bold: 'bold',
     underline: true
   },
+  play: async ({ canvasElement }) => { 
+    const canvas = within(canvasElement);
+    expect(canvas.getByTestId("myText")).toBeInTheDocument();
+    expect(canvas.getByTestId("myText")).toHaveStyle({ borderBottom: '1px solid #000000' });
+  }
 };
 export const Disabled: Story = {
     args: {
@@ -54,4 +67,9 @@ export const Disabled: Story = {
       disabled: true,
       underline: false
     },
+    play: async ({ canvasElement }) => { 
+      const canvas = within(canvasElement);
+      expect(canvas.getByTestId("myText")).toBeInTheDocument();
+      expect(canvas.getByTestId("myText")).toHaveStyle({ opacity: '0.5', cursor: 'not-allowed' })
+    }
   };
