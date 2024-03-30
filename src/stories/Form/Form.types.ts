@@ -1,5 +1,5 @@
 import "react"
-export type LabelProps = {
+export type FormProps = {
 
     /**
      * Label contents
@@ -17,5 +17,7 @@ export type LabelProps = {
      * Did the button pass validation
      */
     isvalid?: boolean;
+
+    children?: React.ReactNode;
 
   }

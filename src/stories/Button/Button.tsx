@@ -7,7 +7,6 @@ const StyledButton = styled.button<{ size?: string, disabled?: boolean, secondar
   padding: 1em;
   border: 1px solid white;
   border-radius: 20px;
-  margin-left: 1em;
   font-weight: 500;
   
   ${({ size }) =>

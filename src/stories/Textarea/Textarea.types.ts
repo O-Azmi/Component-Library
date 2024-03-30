@@ -1,5 +1,5 @@
 import "react"
-export type LabelProps = {
+export type TextareaProps = {
 
     /**
      * Label contents
@@ -18,4 +18,8 @@ export type LabelProps = {
      */
     isvalid?: boolean;
 
+    cols: number;
+
+    rows: number ;
+    
   }

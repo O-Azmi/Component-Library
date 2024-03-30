@@ -1,0 +1,16 @@
+
+FROM node:21.6-bullseye
+
+WORKDIR /Oazmiapp
+
+ENV PATH="./node_modules/.bin:$PATH"
+
+COPY package*.json .
+
+RUN npm ci
+
+RUN npx playwright install --with-deps chromium
+
+COPY . .
+
+CMD ["npm", "run", "ci:test"]

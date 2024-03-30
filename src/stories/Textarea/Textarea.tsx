@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import type { LabelProps } from "./Label.types.ts";
+import type { TextareaProps } from "./Textarea.types.ts";
 
 const StyledLabel = styled.label<{disabled?: boolean, font?: string, isvalid?: boolean}>`
  font-family: 'Times New Roman', Times, serif;
@@ -40,7 +40,7 @@ const Container = styled.div`
     display:flex;
     flex-direction: column;
 `
-const InputField = styled.input<{ isvalid?: boolean }> `
+const StyledTextarea = styled.textarea<{ isvalid?: boolean, disabled?:boolean}> `
     border-radius: 5px;
     padding: .8em;
     width: 17em;
@@ -63,21 +63,24 @@ const InputField = styled.input<{ isvalid?: boolean }> `
     }
     `};
 `;
-export default function Label({ label, disabled, font, isvalid }: LabelProps) {
+export default function Label({ label, disabled, font, isvalid, cols, rows }: TextareaProps) {
     return (
         <Container>
             <StyledLabel 
                 font={font}
                 disabled={disabled}
-                data-testid="myLabel"
                 isvalid={isvalid}
+                data-testid="myLabel"
+
             >
                 {label}
             </StyledLabel>
-            <InputField 
+            <StyledTextarea 
                 disabled={disabled} 
                 isvalid={isvalid} 
-                data-testid="myInputField"
+                data-testid="myTextarea"
+                cols = {cols}
+                rows = {rows}
             />
         </Container>
     );
