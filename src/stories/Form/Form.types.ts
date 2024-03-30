@@ -17,7 +17,4 @@ export type FormProps = {
      * Did the button pass validation
      */
     isvalid?: boolean;
-
-    children?: React.ReactNode;
-
   }
