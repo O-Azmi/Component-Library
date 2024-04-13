@@ -31,7 +31,7 @@ export default function LandingBox({disabled }: LandingProps) {
         <StyledTextBox disabled={disabled} data-testid="myLandingDiv">
           <Text label={'<h1>'} size={'medium'} bold={'bold'} color={'#0037ff'}/>
           <Text label={'Hey!'} size={'medium'} bold={'bold'} color={'white'}/>
-          <Text label={"I'm Oualid,"} size={'medium'} bold={'bold'} color={'#0037ff'}/>
+          <Text label={"I'm Oualid,"} size={'medium'} bold={'bold'} color={'white'}/>
           <Text label={"Full-Stack Web Developer>"} size={'medium'} bold={'bold'} color={'white'}/>
           <Text label={"</h1>"} size={'medium'} bold={'bold'} color={'#0037ff'}/>
         </StyledTextBox>
