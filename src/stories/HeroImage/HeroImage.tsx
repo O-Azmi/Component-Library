@@ -1,20 +1,31 @@
 import styled, { css } from 'styled-components';
 import { HeroImageProps } from './HeroImage.types';
 
-const StyledHeroImage = styled.img<{ disabled?: boolean}>`
+const StyledImageContainer = styled.div`
+  width: 98.9vw;
+  height: 100vh; 
+`;
 
-    ${props =>
+const StyledHeroImage = styled.img<{disabled?: boolean}>`
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  filter: grayscale(50%);
+
+  ${props =>
     props.disabled &&
     css`
-    filter: grayscale(100%);
+    filter: grayscale(1);
     cursor: not-allowed;
     `};
-`
+`;
 
-export default function Image({ height, src, alt, disabled, width }: HeroImageProps) {
-  return (
-    <>
-      <StyledHeroImage height={height} src={src} alt={alt} width={width}  disabled={disabled} data-testid="myHeroImage"/>
-    </>
-  );
-};
+export default function HeroImage({ height, src, alt, disabled, width }: HeroImageProps) {
+    return (
+      <StyledImageContainer>
+        <StyledHeroImage height={height} src={src} alt={alt} width={width}  disabled={disabled} data-testid="myHeroImage"/>
+      </StyledImageContainer>
+    );
+  };
+
+ 

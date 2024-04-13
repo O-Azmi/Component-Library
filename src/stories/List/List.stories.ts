@@ -1,15 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import HeroImage from './HeroImage.tsx'; 
+import List from './List.tsx'; 
 import { within, expect } from '@storybook/test'; 
 
 const meta: Meta = {
-  title: 'Example/Hero Image',
-  component: HeroImage,
+  title: 'Example/List',
+  component: List,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {
+    
   },
   
 };
@@ -20,29 +21,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    src: "../Images/Hero.jpg",
-    alt: "An image of a beach",
-    width: "100%",
-    disabled: false,
-    height: "auto"
+    text: "Home",
   },
   play: async ({ canvasElement }) => { 
     const canvas = within(canvasElement);
-    expect(canvas.getByTestId("myHeroImage")).toBeInTheDocument();
-}
+    expect(canvas.getByTestId("myList")).toBeInTheDocument();
+  }
 };
 
 export const Disabled: Story = {
     args: {
-    src: "../Images/Hero.jpg",
-    alt: "An image of a beach",
-    width: "100%",
-    disabled: true,
-    height: "auto",
+      text: "Home",
+      disabled: true
     },
     play: async ({ canvasElement }) => { 
       const canvas = within(canvasElement);
-      expect(canvas.getByTestId("myHeroImage")).toHaveStyle({ filter: 'grayscale(1)', cursor: 'not-allowed' });
-  }
+      expect(canvas.getByTestId("myList")).toHaveStyle({ opacity: '0.5', cursor: 'not-allowed' });
+    }
   };
-  

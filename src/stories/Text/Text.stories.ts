@@ -27,7 +27,8 @@ export const Primary: Story = {
     label: 'Label',
     size: 'medium',
     bold: 'default',
-    underline: false
+    underline: false,
+    color: "black"
   },
   play: async ({ canvasElement }) => { 
     const canvas = within(canvasElement);
@@ -39,7 +40,8 @@ export const Bold: Story = {
     label: 'Label',
     size: 'medium',
     bold: 'bold',
-    underline: false
+    underline: false,
+    color: "black"
   },
   play: async ({ canvasElement }) => { 
     const canvas = within(canvasElement);
@@ -52,7 +54,9 @@ export const Underline: Story = {
     label: 'Label',
     size: 'medium',
     bold: 'bold',
-    underline: true
+    underline: true,
+    color: "black"
+
   },
   play: async ({ canvasElement }) => { 
     const canvas = within(canvasElement);
@@ -65,7 +69,9 @@ export const Disabled: Story = {
       label: 'Label',
       size: 'medium',
       disabled: true,
-      underline: false
+      underline: false,
+      color: "black"
+
     },
     play: async ({ canvasElement }) => { 
       const canvas = within(canvasElement);

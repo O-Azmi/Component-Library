@@ -1,12 +1,10 @@
 import './App.css'
-
+import LandingPage from './stories/LandingPage/LandingPage'
 function App() {
 
   return (
     <>
-      <div>
-        <h1>Codin A1</h1>
-      </div>
+      <LandingPage/>
     </>
   )
 }

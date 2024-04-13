@@ -20,4 +20,7 @@ export type TextProps = {
      * Underline text?
      */
     underline?: boolean;
+
+    color: string;
+    
   }

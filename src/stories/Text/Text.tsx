@@ -2,9 +2,8 @@ import styled, { css } from 'styled-components';
 import type { TextProps } from "./Text.types.ts";
 
 const StyledText = styled.text<{disabled?: boolean, size: string, bold: string, underline?: boolean}>`
- font-family: 'Times New Roman', Times, serif;
+ font-family: 'Roboto', Times, serif;
  color: #3a4556;
-
  ${({ size }) =>
     size === 'small' &&
     css`
@@ -14,7 +13,7 @@ const StyledText = styled.text<{disabled?: boolean, size: string, bold: string, 
   ${({ size }) =>
     size === 'medium' &&
     css`
-    font-size: 2em;    
+    font-size: 1.7em;    
     `};
 
   ${({ size }) =>
@@ -50,7 +49,7 @@ const StyledText = styled.text<{disabled?: boolean, size: string, bold: string, 
 `;
 
 
-export default function Text({ label, disabled, size, bold, underline }: TextProps) {
+export default function Text({ label, disabled, size, bold, underline, color }: TextProps) {
     return (
             <StyledText
                 size={size}
@@ -58,6 +57,8 @@ export default function Text({ label, disabled, size, bold, underline }: TextPro
                 bold={bold}
                 underline={underline}
                 data-testid="myText"
+                style={{ color: color }}
+                
             >
               {label}
             </StyledText>
