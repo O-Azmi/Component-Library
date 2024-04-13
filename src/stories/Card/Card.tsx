@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components';
 import { CardProps } from './Card.types';
-import Text from "../Text/Text"
 
 const StyledCard = styled.img<{ disabled?: boolean }>`
   border-radius: 15px;
   transition: transform 0.3s ease;
-
+  margin-right: 2em;
   ${props =>
     !props.disabled &&
     css`
@@ -29,19 +28,12 @@ const Container = styled.div`
   flex-direction: column;
   text-align: center;
 `;
-const WrapText = styled.div`
-  margin-top: 1.5em;
-`;
 
 
-
-export default function Card({ src, alt, disabled, height }: CardProps) {
+export default function Card({ src, alt, disabled, height, width }: CardProps) {
   return (
     <Container>
-      <StyledCard data-testid ="myCard" height={height} src={src} alt={alt}  disabled={disabled} />
-      <WrapText>
-      <Text label={"E-Commerce Project"} size={''} bold={'bold'} disabled={disabled} />
-      </WrapText>
+      <StyledCard data-testid ="myCard" height={height} src={src} alt={alt} width={width}  disabled={disabled} />
     </Container>
   );
 }
