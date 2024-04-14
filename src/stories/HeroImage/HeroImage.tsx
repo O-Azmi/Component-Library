@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { HeroImageProps } from './HeroImage.types';
 
 const StyledImageContainer = styled.div`
-  width: 98.9vw;
+  width: 100%;
   height: 100vh; 
 `;
 

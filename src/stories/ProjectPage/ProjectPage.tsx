@@ -3,6 +3,7 @@ import type { ProjectPageProps } from "./ProjectPage.types.ts";
 import Text from "../Text/Text.tsx"
 import ProjectsGrid from '../ProjectsGrid/ProjectsGrid.tsx';
 const StyledSection = styled.section<{disabled?: boolean}>`
+margin-bottom: 2em;
     ${props =>
     props.disabled &&
     css`
