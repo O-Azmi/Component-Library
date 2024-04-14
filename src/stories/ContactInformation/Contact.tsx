@@ -7,6 +7,8 @@ const Container = styled.div<{disabled?: boolean}>`
     display:flex;
     flex-direction: column;
     padding-right: 13em;
+    margin-bottom: 7em;
+    
     ${props =>
     props.disabled &&
     css`

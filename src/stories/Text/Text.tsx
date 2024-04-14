@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import type { TextProps } from "./Text.types.ts";
 
-const StyledText = styled.text<{disabled?: boolean, size: string, bold: string, underline?: boolean}>`
+const StyledText = styled.p<{disabled?: boolean, size: string, bold: string, underline?: boolean}>`
  font-family: 'Roboto', Times, serif;
  color: #3a4556;
  ${({ size }) =>

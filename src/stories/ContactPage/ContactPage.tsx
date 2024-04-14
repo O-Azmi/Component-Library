@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 `
 const WrapperTwo = styled.div`
     text-align: center;
-    margin-bottom: 5em;
+    margin-bottom: 7em;
 `
 
 export default function ContactPage({ disabled }: ContactPageProps) {

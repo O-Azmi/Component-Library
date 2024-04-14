@@ -21,7 +21,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-
+    disabled: false
   },
   play: async ({ canvasElement }) => { 
     const canvas = within(canvasElement);
