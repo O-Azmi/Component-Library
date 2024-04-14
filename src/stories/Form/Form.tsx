@@ -7,8 +7,7 @@ import TextArea from '../Textarea/Textarea.tsx'
 const StyledForm = styled.form<{$isvalid?: boolean}>`
     display:flex;
     flex-direction: column;
-    justify-content: flex-start;
-
+    
 `
 const ValidationText = styled.span<{isvalid?: boolean}>`
   display: none;

@@ -19,7 +19,7 @@ export default function LandingPage({ disabled }: LandingPageProps) {
     return (
     <StyledHeader disabled={disabled} data-testid="myLandingPage">
         <Navigation/>
-        <HeroImage alt={'Hero Image'} width={''} src={'../Images/b.jpg'} height={''}/>
+        <HeroImage alt={'Hero Image'} width={''} src={'../Images/proba.jpg'} height={''}/>
         <LandingBox />
     </StyledHeader>
     );
