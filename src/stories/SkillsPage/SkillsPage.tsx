@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 
 export default function SkillsPage({ disabled }: SkillsPageProps) {
     return (
-    <StyledSection disabled={disabled} data-testid="mySkillsPage">
+    <StyledSection id="SkillsPage" disabled={disabled} data-testid="mySkillsPage">
         <Wrapper>
        <Text label={'Skills'} size={'medium'} bold={'bold'} color={''}/>
        </Wrapper>

@@ -29,7 +29,7 @@ const WrapperTwo = styled.div`
 
 export default function ContactPage({ disabled }: ContactPageProps) {
     return (
-    <StyledSection disabled={disabled} data-testid="myContactPage">
+    <StyledSection id="ContactPage" disabled={disabled} data-testid="myContactPage">
         <Wrapper>
        <Text label={'Contact Me'} size={'medium'} bold={'bold'} color={''}/>
        </Wrapper>

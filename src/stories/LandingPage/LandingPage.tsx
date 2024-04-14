@@ -17,7 +17,7 @@ const StyledHeader = styled.header<{disabled?: boolean}>`
 
 export default function LandingPage({ disabled }: LandingPageProps) {
     return (
-    <StyledHeader disabled={disabled} data-testid="myLandingPage">
+    <StyledHeader id="LandingPage" disabled={disabled} data-testid="myLandingPage">
         <Navigation/>
         <HeroImage alt={'Hero Image'} width={''} src={'Images/proba.jpg'} height={''}/>
         <LandingBox />
