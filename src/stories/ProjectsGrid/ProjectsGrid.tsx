@@ -34,19 +34,19 @@ export default function ProjectsGrid({disabled}: ProjectsGridProps) {
       </WrapText>
       </Mini>
       <Mini>
-      <Card alt={'Couple holding hands'} width={'400px'} src={'Images/Projects/Furniture.jpg'} height={''}/>
+      <Card alt={'Furniture'} width={'400px'} src={'Images/Projects/Furniture.jpg'} height={''}/>
       <WrapText>
       <Text label={'Furniture Website'} size={''} bold={'bold'} color={''}/>
       </WrapText>
       </Mini>
       <Mini>
-      <Card alt={'Couple holding hands'} width={'400px'} src={'Images/Projects/Space.jpg'} height={''}/>
+      <Card alt={'Earth space view'} width={'400px'} src={'Images/Projects/Space.jpg'} height={''}/>
       <WrapText>
       <Text label={'Space 3D website'} size={''} bold={'bold'} color={''}/>
       </WrapText>
       </Mini>
       <Mini>
-      <Card alt={'Couple holding hands'} width={'400px'} src={'Images/Projects/Maps.jpg'} height={''}/>
+      <Card alt={'Red pin put on map'} width={'400px'} src={'Images/Projects/Maps.jpg'} height={''}/>
       <WrapText>
       <Text label={'Maps Website'} size={''} bold={'bold'} color={''}/>
       </WrapText>

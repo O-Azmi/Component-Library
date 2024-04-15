@@ -21,11 +21,18 @@ const StyledHeroImageWrapper = styled.div`
   top: 0;
   left: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); 
+  
 `;
 
 const StyledHeroImage = styled.img<{disabled?: boolean}>`
   width: 100%; 
   height: 100%; 
+  ${props =>
+    props.disabled &&
+    css`
+    filter: grayscale(1);
+    cursor: not-allowed;
+    `};
 `;
 
 export default function HeroImage({ height, src, alt, disabled, width }: HeroImageProps) {

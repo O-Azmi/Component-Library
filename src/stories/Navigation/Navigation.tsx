@@ -2,7 +2,6 @@ import styled, {css} from 'styled-components';
 import type { NavigationProps } from "./Navigation.types.ts";
 import Text from "../Text/Text.tsx"
 import UnorderedList from '../UnorderedList/UnorderedList.tsx';
-import { Link} from 'react-scroll';
 
 const StyledNavigation = styled.nav<{disabled?: boolean, isvalid?: boolean}>`
   display:flex;
