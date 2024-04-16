@@ -13,6 +13,7 @@ const StyledImageContainer = styled.div<{disabled?: boolean}>`
     `};
 `;
 
+// hello
 const StyledHeroImageWrapper = styled.div`
   width: 100%; 
   height: 100%; 
